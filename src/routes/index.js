@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-pascal-case */
 import PrivateRoute from "../component/privateRoutes";
 import Login from "../page/login";
 import SignUp from "../page/signup";
@@ -36,6 +37,9 @@ import System from "../page/staff/system";
 import RequestRepair from "../page/staff/reqRepair";
 import WorkContract from "../page/staff/workContract";
 import Profile from "../page/staff/profile";
+import Detail_System from "../page/staff/details_system";
+import Detail_Req from "../page/staff/details_req";
+import Details_Complaints from "../page/staff/details_complaint";
 
 export const routes = [
   {
@@ -184,6 +188,18 @@ export const routes = [
       {
         path:"/staff/profile",
         element: <Profile />
+      },
+      {
+        path:"/staff/details_system",
+        element: <Detail_System/>
+      },
+      {
+        path:"/staff/details_req",
+        element: <Detail_Req/>
+      },
+      {
+        path:"/staff/details_complaint",
+        element: <Details_Complaints/>
       },
       
     ]
