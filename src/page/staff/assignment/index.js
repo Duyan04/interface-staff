@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink} from "react-router-dom";
 
 
 function Assignment(){

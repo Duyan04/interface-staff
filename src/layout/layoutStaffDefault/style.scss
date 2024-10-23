@@ -1,0 +1,335 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    width: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+  
+  #container {
+    width: 100%;
+    display: flex;
+    height: 100vh;
+  }
+  
+  .sidebar {
+    width: 250px;
+    background-color: #d9d9d9;
+    padding: 20px;
+    border-right: 2px solid #ccc;
+    
+  }
+  
+  .profile {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .avatar {
+    width: 80px;
+    height: 80px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+  .avatar img{
+    width: 100%;
+    border-radius: 50%;
+  }
+  
+  .profile p {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  .menu {
+    height: auto;
+    background-color: #ffffff;
+    width:250px;
+    margin-left: -20px;
+    padding: 20px;
+    border-right: 2px solid #ccc;
+  }
+  .menu ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .menu ul li {
+    margin-bottom: 15px;
+    position: relative; 
+  }
+  
+  .menu ul li a {
+    text-decoration: none;
+    color: black;
+  
+    display: block;
+    padding: 10px; 
+    
+  }
+  
+  .menu ul li.active > a
+  {
+    color: black;
+    font-weight: bold;
+  }
+  .menu ul li:hover > a {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+  }
+  
+  .submenu {
+    display: none; 
+    list-style: none;
+    padding-left: 20px;
+    margin-top: 15px;
+    margin-left: 15px;
+   
+  }
+  
+  .menu ul li:hover .submenu,
+  .menu ul li.active .submenu { /* Keep menu visible when parent menu is active */
+    display: block; /* Show menu on hover or if parent menu is active */
+  }
+  
+  
+  
+  .submenu li a {
+    padding-left: 10px; 
+    background-color: rgba(217, 217, 217, 1);
+  }
+  
+  
+  .signout {
+    padding: 10px 20px;
+    background-color: #6a6868;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    width: fit-content;
+    margin: 70px auto;
+    
+  }
+  .signout:hover{
+    background-color: #333;
+  }
+  
+  .main-content {
+    flex: 1;
+    padding: px;
+    background-color: white;
+  }
+  
+  .main-content h1 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: #d3d3d3;
+    padding: 10px;
+  }
+  
+  .title_screen {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .title_screen h2 {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    align-items: center;
+  }
+  
+  .filter-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .filter-group label {
+    font-weight: bold;
+  }
+  
+  #system-select, #status-select, .search-bar {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+  }
+  
+  .search-bar {
+    width: 200px;
+  }
+  
+  .maintenance-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  .maintenance-table th, .maintenance-table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+  }
+  
+  .maintenance-table th {
+    background-color: #eee;
+  }
+  
+  .maintenance-table a {
+    text-decoration: none;
+    color: blue;
+  }
+  
+  .maintenance-table select {
+    padding: 5px;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .pagination a {
+    text-decoration: none;
+    padding: 5px 10px;
+    background-color: #ddd;
+    border-radius: 4px;
+  }
+  
+  .pagination a.active {
+    background-color: black;
+    color: white;
+  }
+  
+  .pagination a:hover {
+    background-color: #bbb;
+  }
+  
+  /* page details of system condition */
+  .details-form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  .back-btn {
+    position: absolute;
+    top: 10px;
+    left: -40px;
+    background-color: rgb(67, 67, 67);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+  }
+
+  .details-form{
+    height: auto;
+  }
+  
+  .details-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+  
+  form {
+    width: auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 15px;
+    align-items: center;
+  }
+  
+  form label {
+    font-weight: bold;
+  }
+  
+  form input, form select, form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+  }
+  
+  form textarea {
+    height: 50px;
+    resize: none;
+  }
+  
+  hr {
+    grid-column: 1 / -1;
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+  }
+  
+  .update-btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    width: fit-content; 
+    margin: 20px auto; 
+  }
+  
+  
+  .update-btn:hover {
+    background-color: #555;
+  }
+  
+  /*list repair requirement*/
+  .repair-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  .repair-table th, .repair-table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+  }
+  
+  .repair-table th {
+    background-color: #eee;
+  }
+  
+  .repair-table a {
+    text-decoration: none;
+    color: blue;
+  }
+  
+  
+  
+  
+  
+  
+  
+ 
+  
